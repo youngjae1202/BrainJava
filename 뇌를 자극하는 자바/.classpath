@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="Person.java|PersonInfo.java|JDBC_Person.java" kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/kmove/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
