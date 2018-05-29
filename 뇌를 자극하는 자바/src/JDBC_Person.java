@@ -105,7 +105,7 @@ class JDBC_Person {
         	// 2단계: JDBC드라이버를 로드한다.
             Class.forName("com.mysql.jdbc.Driver");
             // 3단계: 드라이버매니져 클래스는 getConnection메소드로 DB를 연결한다.
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql", "root", "12345");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/malldb", "root", "12345");
             System.out.println("데이터베이스에 접속했습니다.");
             
             // 커넥션 객체가 Statement 객체를 생성

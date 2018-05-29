@@ -11,7 +11,11 @@ public class InterfaceExample2 {
 	}
 	static void checkOutAll(Lendable arr[],String borrower, String date) {
 		for(int cnt = 0; cnt<arr.length; cnt++)
-			arr[cnt].checkOut(borrower, date);
+			try {
+				arr[cnt].checkOut(borrower, date);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 	}
 
 }

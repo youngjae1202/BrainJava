@@ -13,11 +13,11 @@ public class AppCDInfo extends CDInfo implements Lendable {
 	//Implements 공통의 기능만 가져온다
 	@Override
 	public void checkOut(String borrower, String date) {
-		if(state != 0)
+		if(state != STATE_NORMAL)
 			return;
 		this.borrower = borrower;
 		this.checkOutDate = date;
-		this.state = 1;
+		this.state = STATE_BOPROWED;
 		System.out.println("*"+ title + "가 대출되었습니다.");
 		System.out.println("대출인:" + borrower);
 		System.out.println("대출일:" + date + "\n");
@@ -27,7 +27,7 @@ public class AppCDInfo extends CDInfo implements Lendable {
 	public void checkIn() {
 		this.borrower = null;
 		this.checkOutDate = null;
-		this.state = 0;
+		this.state = STATE_NORMAL;
 		System.out.println("*" + title + "가 반납되었습니다.");
 		
 	}

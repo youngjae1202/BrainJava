@@ -1,0 +1,7 @@
+JDBC 에러
+
+ 
+ 
+ Unhandled exception type SQLException
+ 원인: 예외처리 필요
+ 해결: try catch 문이나 Exception 값을 던져준다
