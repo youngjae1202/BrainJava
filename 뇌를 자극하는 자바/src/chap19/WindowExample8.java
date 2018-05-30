@@ -61,7 +61,7 @@ public class WindowExample8 {
 		System.out.println("프로그램 시작");
 
 		try {
-			jdbcManager.DBConnection("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/malldb", "root", "12345");
+			jdbcManager.DBConnection("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/malldb?useUnicode=true&characterEncoding=utf8", "root", "12345");
 			System.out.println("데이터베이스에 접속했습니다.");
 			frame.setTitle("참가자 명단 프로그램: DB접속 성공");
 		} catch (ClassNotFoundException cnfe) {
