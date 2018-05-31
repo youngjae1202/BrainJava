@@ -52,7 +52,7 @@ public class SelectActionListener implements ActionListener {
 		if(rowCount >=1) {
 		while(rs.next()) {
 			arr[0] = rs.getString("pname");
-			arr[1] = "25";
+			arr[1] = rs.getString("age");
 			arr[2] = rs.getString("gender");
 					
 			//arr[2] = (rs.getString("gender").equals("m")?"남":"여");
@@ -60,7 +60,7 @@ public class SelectActionListener implements ActionListener {
 			model.addRow(arr);
 		}
 		}else {//조호된 결과가 없을시
-			JOptionPane.showMessageDialog(null, "경고 메시지 내용", "조회된 결과가 없습니다.", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(null, "조회된 결과가 없습니다.", "조회 결과", JOptionPane.WARNING_MESSAGE);
 		}
 	}catch(Exception ex) {
 		ex.getMessage();

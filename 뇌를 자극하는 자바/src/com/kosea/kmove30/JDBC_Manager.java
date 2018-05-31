@@ -33,6 +33,23 @@ public class JDBC_Manager {
 		Class.forName(driver);// JDBC드라이버를 로드한다.
 		conn = DriverManager.getConnection(url, user, pass);
 		return conn;
+	}// query- "insert into person(pname,age,gender)values("홍길동",42,"m");
+
+	public void insertTable(String[] arr) throws Exception {
+
+		String name = arr[0];
+		String age = arr[1];
+		String gender = arr[2];
+		String query = "Insert into person(pname,age,gender)values" + "('" + name + "'," + age + ",'" + gender + "'"
+				+ ")";
+		System.out.println("query - " + query);
+		stmt = conn.createStatement();
+		int insertCount = stmt.executeUpdate(query);
+
+		if (insertCount > 0) {
+			System.out.println(insertCount + "건이 삽입 되었습니다.");
+		}
+
 	}
 
 	// query - "select pname, age, gender from person"
@@ -40,6 +57,18 @@ public class JDBC_Manager {
 		stmt = conn.createStatement();
 		rs = stmt.executeQuery(query);
 		return rs;
+	}
+
+	public void updateTable(String name,String age) throws Exception {
+		String query = "update person set age =" + age + 
+				" where pname ='"+name+"'";
+		stmt = conn.createStatement();
+		System.out.println(query);
+		int updateCount = stmt.executeUpdate(query);
+		if (updateCount > 0) {
+			System.out.println(updateCount + "건이 수정 되었습니다.");
+		}
+			
 	}
 
 	public void deleteTable(String deleteName) throws Exception {// DB삭제
