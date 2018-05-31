@@ -1,0 +1,6 @@
+숫자를 문자열로 변환
+숫자  -> 문자
+String strNum = valueOf();
+문자를 숫자열로 변환
+문자 -> 숫자 
+int num = Integer.parInt("123);
