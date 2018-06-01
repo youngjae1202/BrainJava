@@ -3,6 +3,7 @@ package com.kosea.kmove30;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.HeadlessException;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -14,9 +15,10 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-public class WindowExample8_2 {
-	public static void main(String[] args) {
-
+public class WindowExample8_2{
+	
+	
+	public WindowExample8_2() {
 		// DB관리 Class(연결,조회,삭제,추가);
 		JDBC_Manager jdbcManager = new JDBC_Manager();
 		JFrame frame = new JFrame("참가자 명단 프로그램");
@@ -75,5 +77,11 @@ public class WindowExample8_2 {
 			frame.setTitle("참가자 명단 프로그램: DB접속 실패");
 		}
 
+		
 	}
+	
+	//public static void main(String[] args) {
+		
+
+	//}
 }

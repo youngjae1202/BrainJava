@@ -37,6 +37,8 @@ public class UpdateActionListener implements ActionListener {
 			String name = text1.getText();
 			String age = text2.getText();
 			jdbcManager.updateTable(name,age);
+			SelectActionListener selectActionListener = new SelectActionListener(jdbcManager, table);
+			selectActionListener.actionPerformed(e);
 			  JOptionPane.showMessageDialog(null, "데이터가 갱신 되었습니다.", "데이터 변경.", JOptionPane.WARNING_MESSAGE);
 	      } catch (Exception ex) {
 	         ex.getMessage();

@@ -40,6 +40,9 @@ public class JDBC_Manager {
 		String name = arr[0];
 		String age = arr[1];
 		String gender = arr[2];
+		//콤보박스에 남이면 ->"m" 여이면 "f"
+		gender = gender.equals("남")?"m":"f";
+		
 		String query = "Insert into person(pname,age,gender)values" + "('" + name + "'," + age + ",'" + gender + "'"
 				+ ")";
 		System.out.println("query - " + query);

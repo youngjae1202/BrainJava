@@ -53,9 +53,9 @@ public class SelectActionListener implements ActionListener {
 		while(rs.next()) {
 			arr[0] = rs.getString("pname");
 			arr[1] = rs.getString("age");
-			arr[2] = rs.getString("gender");
+			//arr[2] = rs.getString("gender");
 					
-			//arr[2] = (rs.getString("gender").equals("m")?"남":"여");
+			arr[2] = (rs.getString("gender").equals("m")?"남":"여");
 			System.out.println(arr[0]+""+arr[1]+""+arr[2]);
 			model.addRow(arr);
 		}
